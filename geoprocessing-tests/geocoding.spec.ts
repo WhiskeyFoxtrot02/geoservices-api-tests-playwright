@@ -6,14 +6,12 @@ import { testAttribute } from "../utils/attribute-matcher";
 
 import { test, expect } from "@playwright/test";
 
-
 var path = require("path");
-
 
 //Get .csv file name and estabish a connection to the desired .csv file for the list of domains to test
 //NOTE: As of current version, the first Domain listed will be used as the base for all other domains to be tested against.
-const domainCSVlocation = "../data/Domain_testing2.csv";
-const addressCSVlocation = "../data/geocoding-addresses-full.csv";
+const domainCSVlocation = "../data/URL-domains.csv";
+const addressCSVlocation = "../data/address-processing-addresses.csv";
 
 const domainsCSV = parse(fs.readFileSync(path.join(__dirname, domainCSVlocation), 'utf8'),{
   //Insert desired .csv formatting parameters.
